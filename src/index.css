@@ -146,8 +146,8 @@
 }
 
 @layer components {
-  .home-hero { display:grid; grid-template-columns:1.02fr .98fr; gap:.65rem; min-height:calc(100dvh - 1rem); padding-top:7.4rem; padding-bottom:1.2rem; }
-  .hero-photo,.hero-copy-panel { border-radius:1.55rem; overflow:hidden; min-height:42rem; }
+  .home-hero { display:grid; grid-template-columns:1.02fr .98fr; gap:.65rem; height:min(50rem, 100dvh); min-height:42rem; padding-top:7.4rem; padding-bottom:1rem; }
+  .hero-photo,.hero-copy-panel { border-radius:1.55rem; overflow:hidden; min-height:0; height:100%; }
   .hero-photo { position:relative; }
   .hero-photo img { width:100%; height:100%; object-fit:cover; transition:transform 1.4s var(--ease-out-expo); }
   .hero-photo:hover img { transform:scale(1.035); }
@@ -168,14 +168,12 @@
   .center-statement { max-width:58rem; margin:1.3rem auto 4rem; text-align:center; font-size:clamp(2.4rem,4vw,4.8rem); line-height:.98; text-wrap:balance; }
   .story-grid { display:grid; grid-template-columns:.9fr 1.05fr .95fr; gap:1.2rem; }
   .story-card { min-height:30rem; border-radius:1.4rem; overflow:hidden; position:relative; padding:1.6rem; display:flex; flex-direction:column; }
-  .story-card img,.story-shade { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-  .story-shade { background:linear-gradient(to top,rgba(8,10,6,.78),rgba(8,10,6,.06)); }
+  .story-card img { width:calc(100% + 3.2rem); height:17rem; margin:-1.6rem -1.6rem 1.5rem; object-fit:contain; object-position:center; background:#211b18; border-bottom:1px solid rgba(255,255,255,.12); }
   .story-card-dark { background:var(--color-ink); color:var(--color-cream); }
   .story-card-lime { background:var(--color-brand-red); color:var(--color-cream); }
-  .story-card-lime img { height:48%; top:auto; }
-  .story-card-photo { color:var(--color-cream); }
+  .story-card-photo { color:var(--color-cream); background:var(--color-ink); }
   .card-number,.story-content { position:relative; z-index:1; }
-  .card-number { font-size:.68rem; font-weight:800; }
+  .card-number { position:absolute; top:1.3rem; left:1.5rem; font-size:.68rem; font-weight:800; text-shadow:0 1px 8px rgba(0,0,0,.45); }
   .story-content { margin-top:auto; }
   .story-content h3 { font-size:1.75rem; }
   .story-content p { max-width:25rem; margin-top:.65rem; font-size:.86rem; line-height:1.6; opacity:.75; }
@@ -187,8 +185,8 @@
   .marquee-track span { display:flex; gap:1rem; align-items:center; font-weight:700; white-space:nowrap; }
   .marquee-track i { width:4.5rem; height:2.6rem; border-radius:99px; background:url('/img/strip-flooring-brown-white.jpg') center/cover; }
   @keyframes marquee { to { transform:translateX(-50%); } }
-  .stats-stage { position:relative; min-height:100dvh; color:var(--color-cream); overflow:hidden; display:grid; place-items:center; }
-  .stats-backdrop { position:absolute; inset:-8%; background:linear-gradient(rgba(10,13,8,.63),rgba(10,13,8,.84)),url('/img/floor-restore-final.jpg') center/cover; animation:slowZoom 16s ease-in-out infinite alternate; }
+  .stats-stage { position:relative; min-height:46rem; color:var(--color-cream); overflow:hidden; display:grid; place-items:center; }
+  .stats-backdrop { position:absolute; inset:-8%; background:linear-gradient(rgba(22,16,12,.48),rgba(22,16,12,.78)),url('/img/wood-blocks-herringbone.jpg') center/cover; animation:slowZoom 16s ease-in-out infinite alternate; }
   @keyframes slowZoom { to { transform:scale(1.08); } }
   .stats-inner { position:relative; z-index:1; padding-block:8rem; }
   .section-kicker.light { color:var(--color-brass); }
@@ -216,8 +214,9 @@
 
 @media (max-width: 900px) {
   .home-hero { grid-template-columns:1fr; padding-top:6.5rem; }
-  .hero-photo { min-height:58svh; }
-  .hero-copy-panel { min-height:auto; }
+  .home-hero { height:auto; min-height:0; }
+  .hero-photo { height:min(34rem,58svh); min-height:24rem; }
+  .hero-copy-panel { height:auto; min-height:auto; }
   .story-grid,.project-strip { grid-template-columns:1fr; }
   .story-card { min-height:27rem; }
   .stats-grid { grid-template-columns:1fr 1fr; }

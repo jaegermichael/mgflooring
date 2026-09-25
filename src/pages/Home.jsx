@@ -6,7 +6,7 @@ import { ArrowRight } from '../components/icons.jsx'
 const pillars = [
   { number: '01', title: 'What we do', body: 'We supply and install considered flooring for homes, workplaces and demanding commercial spaces.', className: 'story-card story-card-dark' },
   { number: '02', title: 'Our impact', body: 'Every floor is planned around the room, the way it is used and the finish our client wants to live with.', className: 'story-card story-card-lime', image: '/img/wood-blocks-herringbone.jpg' },
-  { number: '03', title: 'Our standard', body: 'Clear advice, careful preparation and a finish that looks right from the first board to the final edge.', className: 'story-card story-card-photo', image: '/img/work-in-progress-2.jpg' },
+  { number: '03', title: 'Our standard', body: 'Clear advice, careful preparation and a finish that looks right from the first board to the final edge.', className: 'story-card story-card-photo', image: '/img/wood-blocks.jpg' },
 ]
 
 const stats = [['10+', 'years of craft'], ['30+', 'trusted brands'], ['8', 'featured projects'], ['3', 'markets served']]
@@ -37,8 +37,8 @@ export default function Home() {
         <div className="story-grid">
           {pillars.map((item, index) => (
             <Reveal key={item.number} delay={index * 100} className={item.className}>
-              {item.image && <img src={item.image} alt="" aria-hidden="true" />}
-              <div className="story-shade" /><span className="card-number">{item.number}</span>
+              {item.image && <img src={item.image} alt="Finished timber flooring by MG Flooring" />}
+              <span className="card-number">{item.number}</span>
               <div className="story-content"><h3>{item.title}</h3><p>{item.body}</p><Link to={index === 0 ? '/services' : '/about'} aria-label={`Read more about ${item.title}`} className="round-link">↗</Link></div>
             </Reveal>
           ))}
