@@ -13,19 +13,17 @@ export const company = {
 }
 
 export const contact = {
-  address: ['MG Flooring (Pvt) Ltd', '15271, 8th Close, Sunningdale', 'Graniteside, Harare, Zimbabwe'],
+  address: ['MG Flooring (Pvt) Ltd', '15271, 8th Close, Graniteside', 'Sunningdale, Harare, Zimbabwe'],
   phones: [
-    { label: 'Call / WhatsApp', value: '+263 774 098 640', href: 'tel:+263774098640' },
+    { label: 'Call / WhatsApp', value: '+263 77 409 8640', href: 'tel:+263774098640' },
     { label: 'Call', value: '+263 712 175 629', href: 'tel:+263712175629' },
-    { label: 'Call', value: '+263 733 868 196', href: 'tel:+263733868196' },
   ],
   emails: [
-    { label: 'info@mgflooring.co.zw', href: 'mailto:info@mgflooring.co.zw' },
     { label: 'mgflooring17@gmail.com', href: 'mailto:mgflooring17@gmail.com' },
   ],
   whatsapp: 'https://wa.me/263774098640',
   hours: 'Mon to Sat · 7:00 to 17:00',
-  banker: 'ZB Bank · 4112171206200 · First Street, Harare Branch',
+  banker: 'ZB Bank · 411200171206405 · First Street, Harare Branch',
   website: 'www.mgflooring.co.zw',
 }
 
@@ -35,6 +33,7 @@ export const navLinks = [
   { label: 'Projects', to: '/projects' },
   { label: 'About', to: '/about' },
   { label: 'Blog', to: '/blog' },
+  { label: 'Payments', to: '/payments' },
   { label: 'Contact', to: '/contact' },
 ]
 
@@ -162,15 +161,14 @@ export const services = [
 
 export const projects = [
   {
-    name: 'Zambezi Water Course, Harare',
+    name: 'Ceramic driveway and carpet installation',
     sector: 'Residential / Commercial',
     scope: 'Laying ceramic driveway and carpets',
-    contactPerson: 'Thembie',
     image: '/img/pavement-1.jpg',
     imageAlt: 'Ceramic driveway paving',
   },
   {
-    name: 'Harare Club',
+    name: 'Heritage parquet flooring',
     sector: 'Private Club',
     scope: 'Timber and parquet flooring',
     image: '/img/wood-blocks-herringbone.jpg',
@@ -178,7 +176,7 @@ export const projects = [
     placeholderImage: true,
   },
   {
-    name: 'Chloride Zimbabwe',
+    name: 'Industrial flooring installation',
     sector: 'Industrial',
     scope: 'Commercial and industrial flooring',
     image: '/img/vinyl-sheeting-1.jpg',
@@ -186,7 +184,7 @@ export const projects = [
     placeholderImage: true,
   },
   {
-    name: 'Evid Engineering, Kadoma',
+    name: 'Engineering workspace flooring',
     sector: 'Engineering',
     scope: 'Flooring supply and installation',
     image: '/img/work-in-progress-1.jpg',
@@ -194,7 +192,7 @@ export const projects = [
     placeholderImage: true,
   },
   {
-    name: 'Mkoba College',
+    name: 'Education facility flooring',
     sector: 'Education',
     scope: 'Flooring supply and installation',
     image: '/img/laminate-1.jpg',
@@ -202,7 +200,7 @@ export const projects = [
     placeholderImage: true,
   },
   {
-    name: 'Minister Sibanda, Mt Pleasant',
+    name: 'Residential hardwood flooring',
     sector: 'Residential',
     scope: 'Hardwood flooring',
     image: '/img/strip-flooring-brown-white.jpg',
@@ -210,7 +208,7 @@ export const projects = [
     placeholderImage: true,
   },
   {
-    name: 'Dominican Convent, 4th Street, Harare',
+    name: 'Institutional hardwood flooring',
     sector: 'Religious / Institutional',
     scope: 'Flooring supply and installation',
     image: '/img/strip-flooring-brown.jpg',

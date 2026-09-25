@@ -10,18 +10,52 @@ const process = [
   { step: '04', label: 'Final, two coats of sealer', image: '/img/floor-restore-final.jpg', alt: 'Finished floor with two coats of sealer' },
 ]
 
+const flooringServices = services.filter((service) => !['floor-restoration', 'decks'].includes(service.slug))
+const extraServices = services.filter((service) => ['floor-restoration', 'decks'].includes(service.slug))
+
 export default function Services() {
   return (
     <>
       <PageHero
-        eyebrow="Our services & products"
-        title="Flooring for every space and purpose."
-        description="We supply and install timber, tile, carpet, vinyl and resin flooring for domestic, commercial and industrial projects, and restore tired wooden floors to look brand new."
+        eyebrow="Our core service"
+        title="Flooring is what we do."
+        description="Our main service is the supply and professional installation of flooring for homes, businesses and industrial spaces. Choose from timber, tile, carpet, vinyl and resin finishes."
       />
 
+      <section className="pb-16 sm:pb-24">
+        <div className="container-x">
+          <Reveal>
+            <div className="grid overflow-hidden rounded-2xl bg-ink text-cream lg:grid-cols-2">
+              <div className="flex flex-col justify-center p-8 sm:p-12 lg:p-16">
+                <h2 className="display text-4xl leading-tight sm:text-5xl">Flooring supply and installation</h2>
+                <p className="mt-6 max-w-xl text-base leading-relaxed text-cream/70 sm:text-lg">
+                  We help you select the right floor, prepare the surface and install every finish with care. One team manages the work from product choice to the final fitted edge.
+                </p>
+                <div className="mt-8">
+                  <Button to="/contact" variant="accent">Discuss your floor</Button>
+                </div>
+              </div>
+              <img
+                src="/img/parquet-teak.jpg"
+                alt="Professionally installed timber flooring"
+                className="h-full min-h-[22rem] w-full object-cover"
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="pb-10 sm:pb-16">
+        <div className="container-x pb-4 sm:pb-8">
+          <Reveal>
+            <h2 className="display max-w-3xl text-4xl leading-tight sm:text-5xl">Choose the flooring that suits your space.</h2>
+          </Reveal>
+          <Reveal delay={80}>
+            <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">These are flooring options within our core supply and installation service.</p>
+          </Reveal>
+        </div>
         <div className="container-x flex flex-col">
-          {services.map((s, i) => (
+          {flooringServices.map((s, i) => (
             <article
               key={s.slug}
               className={`grid items-center gap-10 border-t border-hairline py-14 lg:grid-cols-12 lg:gap-14 lg:py-20 ${
@@ -66,6 +100,32 @@ export default function Services() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-cream-2 py-20 sm:py-28">
+        <div className="container-x">
+          <Reveal>
+            <h2 className="display max-w-3xl text-4xl leading-tight sm:text-5xl">Additional services when your project needs more.</h2>
+          </Reveal>
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {extraServices.map((service, index) => (
+              <Reveal key={service.slug} delay={index * 90}>
+                <article className="grid h-full overflow-hidden rounded-2xl bg-cream lg:grid-cols-[.9fr_1.1fr]">
+                  {service.image ? (
+                    <img src={service.image} alt={service.imageAlt} loading="lazy" className="h-full min-h-64 w-full object-cover" />
+                  ) : (
+                    <Placeholder label={service.name} className="h-full min-h-64 rounded-none border-0" />
+                  )}
+                  <div className="flex flex-col p-7 sm:p-9">
+                    <h3 className="display text-3xl leading-tight">{service.name}</h3>
+                    <p className="mt-4 text-sm leading-relaxed text-muted">{service.description}</p>
+                    <div className="mt-auto pt-7"><Button to="/contact" variant="outline">Enquire</Button></div>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

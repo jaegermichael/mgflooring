@@ -80,11 +80,6 @@ export default function Projects() {
                   <div className="flex flex-1 flex-col p-6">
                     <h2 className="display text-xl leading-snug sm:text-2xl">{p.name}</h2>
                     <p className="mt-2 text-sm text-muted">{p.scope}</p>
-                    {p.contactPerson && (
-                      <p className="mt-4 border-t border-hairline pt-4 text-xs text-muted">
-                        Contact: <span className="text-ink">{p.contactPerson}</span>
-                      </p>
-                    )}
                   </div>
                 </article>
               </Reveal>
