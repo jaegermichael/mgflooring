@@ -1,0 +1,9 @@
+node_modules
+dist
+.DS_Store
+*.log
+
+# Original raw media files (clean copies live in public/)
+/*.jpeg
+/*.jpg
+/*.mp4
