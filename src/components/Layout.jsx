@@ -45,45 +45,21 @@ function Header() {
       </a>
 
       <header
-        className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
-          open ? 'bg-transparent' : scrolled ? 'bg-cream/85 backdrop-blur-xl' : 'bg-transparent'
-        }`}
+        className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-5"
       >
-        <div className="container-x flex items-center justify-between py-5">
-          <Link to="/" className="group flex items-center gap-3" aria-label="MG Flooring — home">
-            <span
-              className={`flex h-11 w-11 items-center justify-center rounded-xl transition-colors duration-500 ${
-                open ? 'bg-cream text-ink' : 'bg-ink text-cream'
-              } group-hover:bg-brass-2`}
-            >
-              <span className="display text-sm font-medium leading-none">MG</span>
-            </span>
-            <span className="flex flex-col">
-              <span
-                className={`display text-xl font-medium leading-none tracking-tight transition-colors ${
-                  open ? 'text-cream' : 'text-ink'
-                }`}
-              >
-                MG Flooring
-              </span>
-              <span
-                className={`mt-1 text-[0.62rem] uppercase tracking-[0.28em] ${
-                  open ? 'text-cream/50' : 'text-muted'
-                }`}
-              >
-                Flooring specialists
-              </span>
-            </span>
+        <div className={`mx-auto flex max-w-[90rem] items-center justify-between rounded-[1.35rem] border border-white/70 px-4 py-3 transition-all duration-500 sm:px-6 ${open ? 'bg-transparent text-cream shadow-none' : scrolled ? 'bg-cream/92 shadow-[0_18px_55px_rgba(18,22,13,.16)] backdrop-blur-xl' : 'bg-white/95 shadow-[0_14px_42px_rgba(18,22,13,.12)] backdrop-blur-xl'}`}>
+          <Link to="/" className={`brand-logo-shell ${open ? 'bg-white' : ''}`} aria-label="MG Flooring, home">
+            <img src="/img/mg-flooring-logo.png" alt="MG Flooring Private Limited" className="brand-logo" />
           </Link>
 
-          <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
+          <nav className="hidden items-center gap-7 lg:flex" aria-label="Primary">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
                 end={link.to === '/'}
                 className={({ isActive }) =>
-                  `link-underline text-[0.82rem] font-medium tracking-wide transition-colors duration-300 ${
+                  `link-underline text-[0.75rem] font-semibold tracking-wide transition-colors duration-300 ${
                     isActive ? 'text-ink is-active' : 'text-muted hover:text-ink'
                   }`
                 }
@@ -164,14 +140,8 @@ function Footer() {
     <footer className="bg-ink text-cream">
       <div className="container-x grid gap-14 py-20 md:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <Link to="/" className="flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-cream text-ink">
-              <span className="display text-sm font-medium leading-none">MG</span>
-            </span>
-            <span className="flex flex-col">
-              <span className="display text-xl font-medium leading-none text-cream">MG Flooring</span>
-              <span className="mt-1 text-[0.62rem] uppercase tracking-[0.28em] text-cream/50">Flooring specialists</span>
-            </span>
+          <Link to="/" className="inline-flex rounded-xl bg-white p-3">
+            <img src="/img/mg-flooring-logo.png" alt="MG Flooring Private Limited" className="h-auto w-56" />
           </Link>
           <p className="mt-6 max-w-xs text-sm leading-relaxed text-cream/60">{company.description}</p>
           <div className="mt-8 flex items-center gap-2 text-sm text-cream/60">
@@ -254,4 +224,5 @@ export default function Layout() {
     </>
   )
 }
+
 

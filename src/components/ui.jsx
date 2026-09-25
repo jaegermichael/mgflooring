@@ -45,7 +45,8 @@ export function Button({ to, href, onClick, children, variant = 'primary', class
   const base =
     'btn group inline-flex items-center justify-center gap-2.5 rounded-full px-7 py-[1.05rem] text-[0.78rem] uppercase tracking-[0.16em]'
   const variants = {
-    primary: 'bg-ink text-cream hover:bg-brass-2',
+    primary: 'bg-ink text-cream hover:bg-lime hover:text-ink',
+    accent: 'bg-lime text-ink hover:bg-ink hover:text-cream',
     light: 'bg-cream text-ink hover:bg-cream-2',
     outline: 'border border-ink/25 text-ink hover:border-ink hover:bg-ink hover:text-cream',
     ghost: 'text-ink hover:text-brass-2',

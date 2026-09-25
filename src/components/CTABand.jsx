@@ -15,7 +15,7 @@ export default function CTABand() {
           </Reveal>
           <Reveal delay={120}>
             <p className="max-w-md text-lg leading-relaxed text-cream/70">
-              Tell us about your space — a single room, a whole building or a national rollout — and we'll
+              Tell us about your space, a single room, a whole building or a national rollout, and we'll
               advise, quote and install with care.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
@@ -38,3 +38,4 @@ export default function CTABand() {
     </section>
   )
 }
+

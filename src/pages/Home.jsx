@@ -1,287 +1,66 @@
 import { Link } from 'react-router-dom'
-import { company, services, projects, reasons, blogPosts, trustSignals } from '../data/site.js'
-import { Button, Reveal, Eyebrow, SectionHeading } from '../components/ui.jsx'
-import ServiceCard from '../components/ServiceCard.jsx'
-import CTABand from '../components/CTABand.jsx'
+import { projects } from '../data/site.js'
+import { Button, Reveal } from '../components/ui.jsx'
 import { ArrowRight } from '../components/icons.jsx'
 
-export default function Home() {
-  const featuredServices = services.slice(0, 6)
+const pillars = [
+  { number: '01', title: 'What we do', body: 'We supply and install considered flooring for homes, workplaces and demanding commercial spaces.', className: 'story-card story-card-dark' },
+  { number: '02', title: 'Our impact', body: 'Every floor is planned around the room, the way it is used and the finish our client wants to live with.', className: 'story-card story-card-lime', image: '/img/wood-blocks-herringbone.jpg' },
+  { number: '03', title: 'Our standard', body: 'Clear advice, careful preparation and a finish that looks right from the first board to the final edge.', className: 'story-card story-card-photo', image: '/img/work-in-progress-2.jpg' },
+]
 
+const stats = [['10+', 'years of craft'], ['30+', 'trusted brands'], ['8', 'featured projects'], ['3', 'markets served']]
+
+export default function Home() {
   return (
     <>
-      {/* HERO */}
-      <section className="relative overflow-hidden">
-        <div className="container-x grid min-h-[100svh] items-center gap-12 pb-16 pt-28 lg:grid-cols-12 lg:gap-8 lg:pb-24 lg:pt-24">
-          <div className="lg:col-span-7">
-            <Reveal>
-              <Eyebrow>Wooden &amp; tile flooring specialists — Harare</Eyebrow>
-            </Reveal>
-            <Reveal delay={90}>
-              <h1 className="display mt-6 text-[2.9rem] leading-[1.0] sm:text-6xl lg:text-7xl xl:text-[5.2rem]">
-                Beautiful floors,
-                <br />
-                laid to <span className="italic text-brass-2">last</span>.
-              </h1>
-            </Reveal>
-            <Reveal delay={180}>
-              <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">
-                MG Flooring supplies and installs premium timber, tile and carpet for homes, businesses and
-                industry across Zimbabwe — from teak parquet to commercial carpet tiles.
-              </p>
-            </Reveal>
-            <Reveal delay={260}>
-              <div className="mt-9 flex flex-wrap items-center gap-4">
-                <Button to="/contact" variant="primary">
-                  Get a quote
-                </Button>
-                <Button to="/projects" variant="ghost">
-                  View our work
-                </Button>
-              </div>
-            </Reveal>
-          </div>
-
-          <div className="relative lg:col-span-5">
-            <Reveal delay={200}>
-              <div className="relative">
-                <div className="relative overflow-hidden rounded-2xl">
-                  <img
-                    src="/img/parquet-teak.jpg"
-                    alt="Warm teak parquet flooring laid in a herringbone pattern"
-                    className="aspect-[3/4] w-full object-cover"
-                    fetchPriority="high"
-                  />
-                </div>
-                <div className="absolute -bottom-6 left-6 rounded-xl border border-hairline bg-cream px-5 py-4 shadow-sm sm:left-8">
-                  <p className="display text-sm font-medium">{company.founded}</p>
-                  <p className="text-xs text-muted">Operating since · Harare</p>
-                </div>
-              </div>
-            </Reveal>
-          </div>
+      <section className="home-hero container-wide">
+        <div className="hero-photo">
+          <img src="/img/parquet-teak.jpg" alt="Warm teak parquet flooring fitted in a herringbone pattern" fetchPriority="high" />
+          <span className="hero-photo-label">Crafted in Zimbabwe</span>
         </div>
-
-        {/* Trust bar */}
-        <div className="border-t border-hairline">
-          <div className="container-x grid grid-cols-2 gap-x-6 gap-y-8 py-10 md:grid-cols-4">
-            {trustSignals.map((t, i) => (
-              <Reveal key={t.label} delay={i * 80}>
-                <div className="flex flex-col gap-1">
-                  <span className="display text-2xl font-medium sm:text-3xl">{t.value}</span>
-                  <span className="text-sm text-muted">{t.label}</span>
-                </div>
-              </Reveal>
-            ))}
+        <div className="hero-copy-panel">
+          <Reveal><p className="micro-label">Flooring specialists since 2015</p></Reveal>
+          <Reveal delay={80}><h1>Floors made<br />to be lived on</h1></Reveal>
+          <Reveal delay={150}><p className="hero-lede">Beautifully supplied and fitted timber, tile, carpet and vinyl flooring for homes and businesses across Zimbabwe.</p></Reveal>
+          <Reveal delay={220}><Button to="/projects" variant="accent">Explore our work</Button></Reveal>
+          <div className="hero-proof">
+            <Reveal delay={260}><div className="experience-mark"><strong>10+</strong><span>years<br />of craft</span></div></Reveal>
+            <Reveal delay={320}><Link className="watch-link" to="/about"><span className="watch-dot">▶</span> Meet MG Flooring</Link></Reveal>
           </div>
         </div>
       </section>
 
-      {/* INTRO */}
-      <section className="py-20 sm:py-28">
-        <div className="container-x grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-          <div className="lg:col-span-5">
-            <Reveal>
-              <div className="relative overflow-hidden rounded-2xl">
-                <img
-                  src="/img/wood-blocks-herringbone.jpg"
-                  alt="Herringbone teak wood block flooring"
-                  className="aspect-[4/5] w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
+      <section className="intro-section container-wide">
+        <Reveal><p className="section-kicker">Who we are</p></Reveal>
+        <Reveal delay={80}><h2 className="center-statement">We create landmark floors for the spaces that matter.</h2></Reveal>
+        <div className="story-grid">
+          {pillars.map((item, index) => (
+            <Reveal key={item.number} delay={index * 100} className={item.className}>
+              {item.image && <img src={item.image} alt="" aria-hidden="true" />}
+              <div className="story-shade" /><span className="card-number">{item.number}</span>
+              <div className="story-content"><h3>{item.title}</h3><p>{item.body}</p><Link to={index === 0 ? '/services' : '/about'} aria-label={`Read more about ${item.title}`} className="round-link">↗</Link></div>
             </Reveal>
-          </div>
-          <div className="lg:col-span-7">
-            <SectionHeading
-              eyebrow="Who we are"
-              title="A contract floor layer trusted across the country."
-              description={company.description}
-            />
-            <Reveal delay={220}>
-              <Link
-                to="/about"
-                className="link-underline mt-8 inline-flex items-center gap-2 text-[0.82rem] font-semibold uppercase tracking-[0.16em] text-ink"
-              >
-                About MG Flooring <ArrowRight className="h-4 w-4" />
-              </Link>
-            </Reveal>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="py-20 sm:py-28">
-        <div className="container-x">
-          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            <SectionHeading
-              eyebrow="Our services &amp; products"
-              title="Flooring for every space and purpose."
-            />
-            <Reveal delay={200}>
-              <Button to="/services" variant="outline" className="hidden md:inline-flex">
-                All services
-              </Button>
-            </Reveal>
-          </div>
+      <section className="service-marquee" aria-label="Our specialisms"><div className="marquee-track">
+        {['Hardwood parquet', 'Commercial flooring', 'Floor restoration', 'Vinyl sheeting', 'Carpet fitting', 'Hardwood parquet'].map((item, i) => <span key={`${item}${i}`}><i />{item}</span>)}
+      </div></section>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredServices.map((s, i) => (
-              <Reveal key={s.slug} delay={(i % 3) * 90}>
-                <ServiceCard service={s} index={i} />
-              </Reveal>
-            ))}
-          </div>
+      <section className="stats-stage"><div className="stats-backdrop" aria-hidden="true" /><div className="container-wide stats-inner">
+        <Reveal><p className="section-kicker light">Measured by the work</p></Reveal>
+        <Reveal delay={80}><h2>Experience you can see in every finish.</h2></Reveal>
+        <div className="stats-grid">{stats.map(([value, label], i) => <Reveal key={label} delay={i * 90} className="stat-item"><strong>{value}</strong><span>{label}</span></Reveal>)}</div>
+      </div></section>
 
-          <Reveal delay={100}>
-            <div className="mt-10 md:hidden">
-              <Button to="/services" variant="outline" className="w-full">
-                All services
-              </Button>
-            </div>
-          </Reveal>
-        </div>
+      <section className="projects-section container-wide">
+        <div className="projects-heading"><div><Reveal><p className="section-kicker">Selected work</p></Reveal><Reveal delay={80}><h2>Built for real rooms and real routines.</h2></Reveal></div><Reveal delay={120}><Button to="/projects" variant="outline">View every project</Button></Reveal></div>
+        <div className="project-strip">{projects.slice(0, 3).map((project, i) => <Reveal key={project.name} delay={i * 90}><Link to="/projects" className="project-tile"><img src={project.image} alt={project.imageAlt} loading="lazy" /><span>{project.sector}</span><h3>{project.name}</h3><ArrowRight className="project-arrow" /></Link></Reveal>)}</div>
       </section>
 
-      {/* FEATURED WORK */}
-      <section className="bg-ink text-cream">
-        <div className="container-x py-20 sm:py-28">
-          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            <SectionHeading eyebrow="Recent work" title="Projects we're proud of." light />
-            <Reveal delay={200}>
-              <Button to="/projects" variant="light" className="hidden md:inline-flex">
-                All projects
-              </Button>
-            </Reveal>
-          </div>
-
-          <div className="mt-14 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-            {projects.slice(0, 6).map((p, i) => (
-              <Reveal key={p.name} delay={(i % 3) * 90}>
-                <Link to="/projects" className="group block">
-                  <div className="relative overflow-hidden rounded-2xl">
-                    <img
-                      src={p.image}
-                      alt={p.imageAlt}
-                      loading="lazy"
-                      className="aspect-[4/3] w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-linear-to-t from-ink/70 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-90" />
-                    <div className="absolute inset-x-0 bottom-0 p-6">
-                      <span className="text-[0.68rem] uppercase tracking-[0.2em] text-cream/70">{p.sector}</span>
-                      <h3 className="display mt-1 text-xl leading-snug text-cream">{p.name}</h3>
-                    </div>
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal delay={100}>
-            <div className="mt-10 md:hidden">
-              <Button to="/projects" variant="light" className="w-full">
-                All projects
-              </Button>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* WHY CHOOSE US */}
-      <section className="py-20 sm:py-28">
-        <div className="container-x">
-          <SectionHeading eyebrow="Why MG Flooring" title="Three reasons clients choose us." />
-          <div className="mt-14 grid gap-8 md:grid-cols-3">
-            {reasons.map((r, i) => (
-              <Reveal key={r.index} delay={i * 100}>
-                <div className="flex h-full flex-col border-t border-ink/20 pt-8">
-                  <span className="display text-4xl font-light text-brass-2 sm:text-5xl">{r.index}</span>
-                  <h3 className="display mt-6 text-2xl">{r.title}</h3>
-                  <p className="mt-3 text-base leading-relaxed text-muted">{r.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* RESTORATION SHOWCASE */}
-      <section className="bg-cream-2/60 py-20 sm:py-28">
-        <div className="container-x grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <SectionHeading
-              eyebrow="Restoration"
-              title="Renew an old wooden floor to look brand new."
-              description="We sand your worn floor with a floor sanding machine, then apply two coats of sealer. The sealer protects and beautifies — bringing tired timber back to life."
-            />
-            <Reveal delay={220}>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Button to="/services" variant="primary">
-                  See the process
-                </Button>
-                <Button to="/contact" variant="ghost">
-                  Get a quote
-                </Button>
-              </div>
-            </Reveal>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <Reveal delay={80}>
-              <img
-                src="/img/floor-restore-before.jpg"
-                alt="Worn wooden floor before sanding"
-                loading="lazy"
-                className="aspect-[3/4] w-full rounded-2xl object-cover"
-              />
-            </Reveal>
-            <Reveal delay={160} className="mt-8">
-              <img
-                src="/img/floor-restore-final.jpg"
-                alt="Restored wooden floor after sanding and sealing"
-                loading="lazy"
-                className="aspect-[3/4] w-full rounded-2xl object-cover"
-              />
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* BLOG TEASER */}
-      <section className="py-20 sm:py-28">
-        <div className="container-x">
-          <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-            <SectionHeading eyebrow="Care &amp; guidance" title="Keep your floors looking their best." />
-            <Reveal delay={200}>
-              <Button to="/blog" variant="outline" className="hidden md:inline-flex">
-                All articles
-              </Button>
-            </Reveal>
-          </div>
-
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {blogPosts.map((post, i) => (
-              <Reveal key={post.slug} delay={i * 100}>
-                <Link
-                  to={`/blog/${post.slug}`}
-                  className="group flex h-full flex-col rounded-2xl border border-hairline p-7 transition-colors duration-500 hover:border-ink/20"
-                >
-                  <span className="text-[0.68rem] uppercase tracking-[0.2em] text-brass-2">{post.category}</span>
-                  <h3 className="display mt-4 text-xl leading-snug transition-colors group-hover:text-brass-2">{post.title}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{post.excerpt}</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-[0.78rem] font-semibold uppercase tracking-[0.14em] text-ink">
-                    Read article{' '}
-                    <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
-                  </span>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CTABand />
+      <section className="final-cta container-wide"><div><p className="section-kicker light">Start a conversation</p><h2>Your next floor starts with the right advice.</h2></div><Button to="/contact" variant="accent">Request a quote</Button></section>
     </>
   )
 }
-
-

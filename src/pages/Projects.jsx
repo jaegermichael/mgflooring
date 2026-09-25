@@ -25,14 +25,14 @@ export default function Projects() {
       <PageHero
         eyebrow="Projects"
         title="Work delivered across Zimbabwe."
-        description="From schools and private clubs to industrial facilities and private residences — a selection of the projects we have supplied and installed."
+        description="From schools and private clubs to industrial facilities and private residences, a selection of the projects we have supplied and installed."
       />
 
       <section className="pb-8">
         <div className="container-x">
           <Reveal>
             <p className="max-w-2xl rounded-xl border border-hairline bg-cream-2/50 px-5 py-4 text-sm text-muted">
-              <span className="font-semibold text-ink">Note:</span> project-specific photography is being compiled —
+              <span className="font-semibold text-ink">Note:</span> project specific photography is being compiled,
               images shown are representative of our work.
             </p>
           </Reveal>
@@ -97,3 +97,4 @@ export default function Projects() {
     </>
   )
 }
+

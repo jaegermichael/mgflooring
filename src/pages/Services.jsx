@@ -7,7 +7,7 @@ const process = [
   { step: '01', label: 'Old wooden floor before sanding', image: '/img/floor-restore-before.jpg', alt: 'Old wooden floor before sanding' },
   { step: '02', label: 'Sanding in progress', image: '/img/work-in-progress-1.jpg', alt: 'Floor sanding in progress' },
   { step: '03', label: 'After being sanded', image: '/img/floor-restore-after.jpg', alt: 'Floor after sanding' },
-  { step: '04', label: 'Final — two coats of sealer', image: '/img/floor-restore-final.jpg', alt: 'Finished floor with two coats of sealer' },
+  { step: '04', label: 'Final, two coats of sealer', image: '/img/floor-restore-final.jpg', alt: 'Finished floor with two coats of sealer' },
 ]
 
 export default function Services() {
@@ -16,7 +16,7 @@ export default function Services() {
       <PageHero
         eyebrow="Our services & products"
         title="Flooring for every space and purpose."
-        description="We supply and install timber, tile, carpet, vinyl and resin flooring for domestic, commercial and industrial projects — and restore tired wooden floors to look brand new."
+        description="We supply and install timber, tile, carpet, vinyl and resin flooring for domestic, commercial and industrial projects, and restore tired wooden floors to look brand new."
       />
 
       <section className="pb-10 sm:pb-16">
@@ -107,3 +107,4 @@ export default function Services() {
     </>
   )
 }
+

@@ -24,7 +24,7 @@ export const contact = {
     { label: 'mgflooring17@gmail.com', href: 'mailto:mgflooring17@gmail.com' },
   ],
   whatsapp: 'https://wa.me/263774098640',
-  hours: 'Mon – Sat · 7:00 – 17:00',
+  hours: 'Mon to Sat · 7:00 to 17:00',
   banker: 'ZB Bank · 4112171206200 · First Street, Harare Branch',
   website: 'www.mgflooring.co.zw',
 }
@@ -51,7 +51,7 @@ export const services = [
     name: 'Hardwood Parquet Floors',
     short: 'Timeless geometric timber, laid to pattern.',
     description:
-      'Hardwood parquet floors are a classic choice known for their durability and beauty. Made from small pieces of wood arranged in a geometric pattern — most commonly herringbone and basket weave — parquet can be crafted from oak, walnut, maple or cherry and finished in a wide range of colours to match any interior.',
+      'Hardwood parquet floors are a classic choice known for their durability and beauty. Made from small pieces of wood arranged in a geometric pattern, most commonly herringbone and basket weave, parquet can be crafted from oak, walnut, maple or cherry and finished in a wide range of colours to match any interior.',
     image: '/img/parquet-teak.jpg',
     imageAlt: 'Warm teak hardwood parquet flooring laid in a pattern',
     gallery: ['/img/parquet-teak.jpg', '/img/wood-blocks-herringbone.jpg'],
@@ -101,7 +101,7 @@ export const services = [
     name: 'Carpeting',
     short: 'Residential and commercial carpet, supplied and laid.',
     description:
-      'Carpeting is available in nylon, polyester, olefin and wool — each with its own benefits. Nylon is durable, stain-resistant and easy to clean; polyester resists stains and comes in many colours; olefin resists moisture and fading; wool is soft and durable at a higher price point. We supply and install residential and commercial carpet tiles.',
+      'Carpeting is available in nylon, polyester, olefin and wool, each with its own benefits. Nylon is durable, stain-resistant and easy to clean; polyester resists stains and comes in many colours; olefin resists moisture and fading; wool is soft and durable at a higher price point. We supply and install residential and commercial carpet tiles.',
     image: '/img/carpeting.jpg',
     imageAlt: 'Rolled carpeting in a showroom',
     video: '/video/carpeting.mp4',
@@ -130,7 +130,7 @@ export const services = [
   },
   {
     slug: 'decks',
-    name: 'Decks — Teak & Composite',
+    name: 'Decks, Teak & Composite',
     short: 'Outdoor teak and composite decking.',
     description:
       'Outdoor decking in teak and composite, designed and installed for patios, verandas and outdoor entertaining areas.',
@@ -143,7 +143,7 @@ export const services = [
     name: 'Vinyl Plank',
     short: 'Realistic timber-look planks that stand up to wear.',
     description:
-      'Vinyl plank flooring delivers the look of timber with the durability and easy care of vinyl — a practical choice for busy homes and commercial spaces.',
+      'Vinyl plank flooring delivers the look of timber with the durability and easy care of vinyl, a practical choice for busy homes and commercial spaces.',
     image: null,
     imageAlt: 'Vinyl plank flooring in a timber finish',
     placeholder: true,
@@ -164,7 +164,7 @@ export const projects = [
   {
     name: 'St Killian High School, Rusape',
     sector: 'Education',
-    scope: 'Laying floor and wall porcelain tiles — 400m²',
+    scope: 'Laying floor and wall porcelain tiles, 400m²',
     contactPerson: 'Sister Dumbura',
     image: '/img/parquet-teak.jpg',
     imageAlt: 'Polished tile flooring laid at a school',
@@ -233,7 +233,7 @@ export const reasons = [
     index: '01',
     title: 'Competitive pricing',
     body:
-      'Our teak floors, decks (teak and composite), vinyl plank, commercial carpet tiles and epoxy floors are competitively priced. From large commercial developments to your private home, we offer reasonable prices to suit your budget — without compromising quality.',
+      'Our teak floors, decks (teak and composite), vinyl plank, commercial carpet tiles and epoxy floors are competitively priced. From large commercial developments to your private home, we offer reasonable prices to suit your budget, without compromising quality.',
   },
   {
     index: '02',
@@ -245,7 +245,7 @@ export const reasons = [
     index: '03',
     title: 'Nationwide reach',
     body:
-      'For over a decade we have served every part of the country. No landmark is too far to reach — send us your pin and we will be there.',
+      'For over a decade we have served every part of the country. No landmark is too far to reach, send us your pin and we will be there.',
   },
 ]
 
@@ -262,14 +262,14 @@ export const blogPosts = [
         heading: 'Routine care',
         paragraphs: [
           'Glazed tile products should be cleaned routinely with an all-purpose, low-VOC household or commercial cleaner. The product you choose should also be compatible with grout-joint cleaning, and the type may vary depending on the tile application and use.',
-          'A multipurpose spray cleaner that removes soap scum, hard-water deposits and mildew can be used on wall-tile areas in residential baths and showers. Apply and agitate with a cotton mop, cloth, sponge or non-metallic brush, then rinse with clean water and dry thoroughly. Routine cleaners should never contain harsh chemicals — acids can damage grout and the glazed surface, and ammonia can discolour grout.',
+          'A multipurpose spray cleaner that removes soap scum, hard-water deposits and mildew can be used on wall-tile areas in residential baths and showers. Apply and agitate with a cotton mop, cloth, sponge or non-metallic brush, then rinse with clean water and dry thoroughly. Routine cleaners should never contain harsh chemicals, acids can damage grout and the glazed surface, and ammonia can discolour grout.',
           'Dust-mop, sweep or vacuum before cleaning with liquid products. Unglazed tile should be cleaned with concentrated tile cleaners at a neutral pH, which better remove grease, oils and normal spills.',
         ],
       },
       {
         heading: 'Removing sealers, waxes and floor finishes',
         paragraphs: [
-          'Glazed ceramic tile should not be sealed — only the grout should be sealed. To remove a topical sealer or floor wax, use a tile sealer and adhesive remover, always testing a small area first. Apply a liberal amount undiluted, let it set without drying until the coating softens, agitate with a white nylon scrub pad if needed, then wipe up the residue and rinse thoroughly with clean water. Do not use ceramic sealer removers on natural stone.',
+          'Glazed ceramic tile should not be sealed, only the grout should be sealed. To remove a topical sealer or floor wax, use a tile sealer and adhesive remover, always testing a small area first. Apply a liberal amount undiluted, let it set without drying until the coating softens, agitate with a white nylon scrub pad if needed, then wipe up the residue and rinse thoroughly with clean water. Do not use ceramic sealer removers on natural stone.',
         ],
       },
       {
@@ -283,7 +283,7 @@ export const blogPosts = [
       {
         heading: 'Grout maintenance & restoration',
         paragraphs: [
-          'Sealing does not guarantee against surface buildup — grout still needs periodic cleaning. For heavy-duty cleaning, use a professional-strength tile and grout cleaner that removes grease, soap scum, body oil, mildew stains and algae while remaining low-VOC.',
+          'Sealing does not guarantee against surface buildup, grout still needs periodic cleaning. For heavy-duty cleaning, use a professional-strength tile and grout cleaner that removes grease, soap scum, body oil, mildew stains and algae while remaining low-VOC.',
           'When grout can no longer be cleaned back to its natural colour, you can restore it with an epoxy-based grout stain that penetrates and seals with a permanent colour. Clean the joint thoroughly before staining, and no further sealing is needed afterwards.',
         ],
       },
@@ -300,7 +300,7 @@ export const blogPosts = [
       {
         heading: 'Keeping your wood floor looking new',
         paragraphs: [
-          'Wood floors bring an earthy, warm feel to the house and are gaining popularity for their beauty, durability and green nature. If you install wooden flooring, you should also understand how to clean and maintain it — proper care keeps the floor looking new and increases its longevity.',
+          'Wood floors bring an earthy, warm feel to the house and are gaining popularity for their beauty, durability and green nature. If you install wooden flooring, you should also understand how to clean and maintain it, proper care keeps the floor looking new and increases its longevity.',
           'For laminate wood flooring, a vacuum cleaner or a flipper mop is very efficient at removing dust. If food or liquid is spilled and forms a stubborn stain, use a dampened cloth to remove it, then wipe with a dry cloth to remove all moisture from the surface.',
         ],
       },
@@ -308,10 +308,10 @@ export const blogPosts = [
         heading: 'Things to remember',
         paragraphs: [
           'Maintain the right temperature and humidity to ensure a long, healthy life for your wood floors.',
-          'Avoid using oil, wax or any other furniture spray, and save your wood flooring from steam cleaning — steam is meant for tile, linoleum and vinyl, and can leave a wood floor looking dull.',
+          'Avoid using oil, wax or any other furniture spray, and save your wood flooring from steam cleaning, steam is meant for tile, linoleum and vinyl, and can leave a wood floor looking dull.',
           'Never use ammonia, alkaline products or other abrasive cleaners, which can dull the finish and cause scratches.',
           'Place soft doormats and rugs to keep dirt and debris at bay, and fit felt pads to the legs of furniture and chairs to avoid scratches. Periodically check the pads for wear and replace them when needed.',
-          'Avoid rolling chairs with casters on the finished surface — place them on rugs or Plexiglas chair mats, and use wide rubber or polyurethane casters.',
+          'Avoid rolling chairs with casters on the finished surface, place them on rugs or Plexiglas chair mats, and use wide rubber or polyurethane casters.',
           'Do not drag furniture or heavy objects across the floor; lift them when they need to move. Protect wood surfaces from direct sunlight with blinds or curtains, as prolonged bright light can change the colour of the wood.',
         ],
       },
@@ -329,19 +329,20 @@ export const blogPosts = [
       {
         heading: 'Clean spills immediately',
         paragraphs: [
-          'Every season brings new problems for hardwood floors — winter brings snow, ice and salt, spring brings rain and dirt, summer adds chlorine and salt water, and autumn brings dirt and leaves. Despite all the upkeep, wood floors are simply too stunning to skip.',
+          'Every season brings new problems for hardwood floors, winter brings snow, ice and salt, spring brings rain and dirt, summer adds chlorine and salt water, and autumn brings dirt and leaves. Despite all the upkeep, wood floors are simply too stunning to skip.',
           'Use a dry or slightly damp cloth to wipe up spills immediately, avoiding wet or steam mops, which cause more damage over time. Because wood swells and shrinks with moisture, keep humidity down to avoid cupping, splitting and gapping. Clean spills as soon as they occur, keep your home between 60 and 80 degrees Fahrenheit (and 30 to 50 percent humidity), and keep wet shoes out of the house.',
         ],
       },
       {
         heading: 'Use furniture pads',
         paragraphs: [
-          'Scratches are among the toughest problems to solve on wood floors. While some are inevitable, many are preventable — one of the best ways is to add furniture pads to the legs of your chairs, sofas and tables.',
+          'Scratches are among the toughest problems to solve on wood floors. While some are inevitable, many are preventable, one of the best ways is to add furniture pads to the legs of your chairs, sofas and tables.',
         ],
       },
     ],
   },
 ]
+
 
 
 

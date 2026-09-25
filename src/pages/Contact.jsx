@@ -43,9 +43,9 @@ export default function Contact() {
     setErrors(e)
     if (Object.keys(e).length) return
 
-    const subject = encodeURIComponent(`Enquiry — ${form.type || 'General'} — ${form.name}`)
+    const subject = encodeURIComponent(`Enquiry, ${form.type || 'General'}, ${form.name}`)
     const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone || '—'}\nProject type: ${form.type || '—'}\n\n${form.message}`,
+      `Name: ${form.name}\nEmail: ${form.email}\nPhone: ${form.phone || 'Not provided'}\nProject type: ${form.type || 'Not selected'}\n\n${form.message}`,
     )
     window.location.href = `mailto:${contact.emails[0].label}?subject=${subject}&body=${body}`
     setSent(true)
@@ -56,7 +56,7 @@ export default function Contact() {
       <PageHero
         eyebrow="Contact us"
         title="Let's build your home together."
-        description="Talk to our team about your project — we're happy to advise, quote and arrange a visit. Reach us by phone, email, WhatsApp, or the form below."
+        description="Talk to our team about your project, we're happy to advise, quote and arrange a visit. Reach us by phone, email, WhatsApp, or the form below."
       />
 
       <section className="pb-20 sm:pb-28">
@@ -228,4 +228,5 @@ export default function Contact() {
     </>
   )
 }
+
 

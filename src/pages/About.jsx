@@ -42,7 +42,7 @@ export default function About() {
             <SectionHeading
               eyebrow="Since 2015"
               title="A registered contractor, built on quality of finish."
-              description="MG Flooring is a registered company and a member of the Construction Industry. We operate from Harare and serve clients nationwide — supplying and laying flooring for homes, schools, clubs, factories and offices."
+              description="MG Flooring is a registered company and a member of the Construction Industry. We operate from Harare and serve clients nationwide, supplying and laying flooring for homes, schools, clubs, factories and offices."
             />
           </div>
         </div>
@@ -80,3 +80,4 @@ export default function About() {
     </>
   )
 }
+
