@@ -168,7 +168,7 @@
   .center-statement { max-width:58rem; margin:1.3rem auto 4rem; text-align:center; font-size:clamp(2.4rem,4vw,4.8rem); line-height:.98; text-wrap:balance; }
   .story-grid { display:grid; grid-template-columns:.9fr 1.05fr .95fr; gap:1.2rem; }
   .story-card { min-height:30rem; border-radius:1.4rem; overflow:hidden; position:relative; padding:1.6rem; display:flex; flex-direction:column; }
-  .story-card img { width:calc(100% + 3.2rem); height:17rem; margin:-1.6rem -1.6rem 1.5rem; object-fit:contain; object-position:center; background:#211b18; border-bottom:1px solid rgba(255,255,255,.12); }
+  .story-card img { display:block; width:calc(100% + 3.2rem); height:auto; margin:-1.6rem -1.6rem 1.5rem; border-bottom:1px solid rgba(255,255,255,.12); }
   .story-card-dark { background:var(--color-ink); color:var(--color-cream); }
   .story-card-lime { background:var(--color-brand-red); color:var(--color-cream); }
   .story-card-photo { color:var(--color-cream); background:var(--color-ink); }

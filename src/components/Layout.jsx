@@ -14,11 +14,18 @@ function ScrollToTop() {
 
 function Header() {
   const [scrolled, setScrolled] = useState(false)
+  const [headerVisible, setHeaderVisible] = useState(true)
   const [open, setOpen] = useState(false)
   const { pathname } = useLocation()
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
+    let previousY = window.scrollY
+    const onScroll = () => {
+      const currentY = window.scrollY
+      setScrolled(currentY > 24)
+      setHeaderVisible(currentY < 120 || currentY < previousY)
+      previousY = currentY
+    }
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -45,7 +52,7 @@ function Header() {
       </a>
 
       <header
-        className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-5 sm:pt-5"
+        className={`fixed inset-x-0 top-0 z-50 px-3 pt-3 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] sm:px-5 sm:pt-5 ${headerVisible || open ? 'translate-y-0' : '-translate-y-[115%]'}`}
       >
         <div className={`mx-auto flex max-w-[90rem] items-center justify-between rounded-[1.35rem] border border-white/70 px-4 py-3 transition-all duration-500 sm:px-6 ${open ? 'bg-transparent text-cream shadow-none' : scrolled ? 'bg-cream/92 shadow-[0_18px_55px_rgba(18,22,13,.16)] backdrop-blur-xl' : 'bg-white/95 shadow-[0_14px_42px_rgba(18,22,13,.12)] backdrop-blur-xl'}`}>
           <Link to="/" className={`brand-logo-shell ${open ? 'bg-white' : ''}`} aria-label="MG Flooring, home">

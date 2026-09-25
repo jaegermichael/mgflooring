@@ -4,7 +4,7 @@ import { Button, Reveal } from '../components/ui.jsx'
 import { ArrowRight } from '../components/icons.jsx'
 
 const pillars = [
-  { number: '01', title: 'What we do', body: 'We supply and install considered flooring for homes, workplaces and demanding commercial spaces.', className: 'story-card story-card-dark' },
+  { number: '01', title: 'What we do', body: 'We supply and install considered flooring for homes, workplaces and demanding commercial spaces.', className: 'story-card story-card-dark', image: '/img/strip-flooring-brown.jpg' },
   { number: '02', title: 'Our impact', body: 'Every floor is planned around the room, the way it is used and the finish our client wants to live with.', className: 'story-card story-card-lime', image: '/img/wood-blocks-herringbone.jpg' },
   { number: '03', title: 'Our standard', body: 'Clear advice, careful preparation and a finish that looks right from the first board to the final edge.', className: 'story-card story-card-photo', image: '/img/wood-blocks.jpg' },
 ]
