@@ -162,15 +162,6 @@ export const services = [
 
 export const projects = [
   {
-    name: 'St Killian High School, Rusape',
-    sector: 'Education',
-    scope: 'Laying floor and wall porcelain tiles, 400m²',
-    contactPerson: 'Sister Dumbura',
-    image: '/img/parquet-teak.jpg',
-    imageAlt: 'Polished tile flooring laid at a school',
-    placeholderImage: true,
-  },
-  {
     name: 'Zambezi Water Course, Harare',
     sector: 'Residential / Commercial',
     scope: 'Laying ceramic driveway and carpets',

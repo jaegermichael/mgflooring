@@ -9,7 +9,7 @@ const pillars = [
   { number: '03', title: 'Our standard', body: 'Clear advice, careful preparation and a finish that looks right from the first board to the final edge.', className: 'story-card story-card-photo', image: '/img/wood-blocks.jpg' },
 ]
 
-const stats = [['10+', 'years of craft'], ['30+', 'trusted brands'], ['8', 'featured projects'], ['3', 'markets served']]
+const stats = [['10+', 'years of craft'], ['30+', 'trusted brands'], ['7', 'featured projects'], ['3', 'markets served']]
 
 export default function Home() {
   return (
