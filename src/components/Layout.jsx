@@ -42,6 +42,25 @@ function Header() {
     }
   }, [open])
 
+  useEffect(() => {
+    if (!open) return undefined
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') setOpen(false)
+    }
+    const desktop = window.matchMedia('(min-width: 1024px)')
+    const onDesktop = (event) => {
+      if (event.matches) setOpen(false)
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    desktop.addEventListener('change', onDesktop)
+    return () => {
+      window.removeEventListener('keydown', onKeyDown)
+      desktop.removeEventListener('change', onDesktop)
+    }
+  }, [open])
+
   return (
     <>
       <a
@@ -97,6 +116,7 @@ function Header() {
             }`}
             aria-label={open ? 'Close menu' : 'Open menu'}
             aria-expanded={open}
+            aria-controls="mobile-navigation"
           >
             {open ? <Close className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -104,22 +124,24 @@ function Header() {
       </header>
 
       <div
-        className={`fixed inset-0 z-40 flex flex-col bg-ink text-cream transition-all duration-500 lg:hidden ${
-          open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
+        id="mobile-navigation"
+        className={`fixed inset-0 z-40 min-h-[100svh] overflow-y-auto overscroll-contain bg-ink text-cream transition-all duration-500 lg:hidden ${
+          open ? 'visible pointer-events-auto opacity-100' : 'invisible pointer-events-none opacity-0'
         }`}
         aria-hidden={!open}
       >
-        <div className="container-x flex flex-1 flex-col justify-center">
-          <nav className="flex flex-col gap-2" aria-label="Mobile">
+        <div className="container-x flex min-h-[100svh] flex-col justify-center pb-[max(2rem,env(safe-area-inset-bottom))] pt-28 sm:pt-32">
+          <nav className="flex flex-col" aria-label="Mobile">
             {navLinks.map((link, i) => (
               <NavLink
                 key={link.to}
                 to={link.to}
                 end={link.to === '/'}
                 onClick={() => setOpen(false)}
+                tabIndex={open ? 0 : -1}
                 style={{ transitionDelay: open ? `${100 + i * 60}ms` : '0ms' }}
                 className={({ isActive }) =>
-                  `display border-b border-cream/10 py-4 text-4xl transition-all duration-500 sm:text-5xl ${
+                  `display border-b border-cream/10 py-3 text-[clamp(1.8rem,8vw,3rem)] leading-none transition-all duration-500 sm:py-4 sm:text-5xl ${
                     open ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
                   } ${isActive ? 'text-brass' : 'text-cream hover:text-cream/70'}`
                 }
@@ -128,11 +150,11 @@ function Header() {
               </NavLink>
             ))}
           </nav>
-          <div className="mt-10 flex flex-col gap-2 text-cream/70">
-            <a href={contact.phones[0].href} className="flex items-center gap-3 py-1">
+          <div className="mt-6 flex flex-col gap-1 text-sm text-cream/70 sm:mt-8 sm:text-base">
+            <a href={contact.phones[0].href} tabIndex={open ? 0 : -1} className="flex min-h-11 items-center gap-3 py-2">
               <Phone className="h-4 w-4" /> {contact.phones[0].value}
             </a>
-            <span className="flex items-center gap-3 py-1">
+            <span className="flex min-h-11 items-center gap-3 py-2">
               <Clock className="h-4 w-4" /> {contact.hours}
             </span>
           </div>

@@ -9,7 +9,7 @@ export const company = {
   founded: '2015',
   location: 'Harare, Zimbabwe',
   description:
-    'MG Flooring (Pvt) Ltd is a major contract floor layer and supplier of a variety of flooring products for domestic, commercial and industrial use. A registered company and member of the Construction Industry, operating since 2015 with operations in Harare.',
+    'MG Flooring (Pvt) Ltd supplies and installs wooden floor tiles across Zimbabwe, specialising in strip wooden flooring tiles, wood blocks, parquet wooden floor tiles and wood laminate for domestic, commercial and industrial spaces.',
 }
 
 export const contact = {
@@ -47,41 +47,41 @@ export const trustSignals = [
 export const services = [
   {
     slug: 'hardwood-parquet',
-    name: 'Hardwood Parquet Floors',
+    name: 'Parquet Wooden Floor Tiles',
     short: 'Timeless geometric timber, laid to pattern.',
     description:
       'Hardwood parquet floors are a classic choice known for their durability and beauty. Made from small pieces of wood arranged in a geometric pattern, most commonly herringbone and basket weave, parquet can be crafted from oak, walnut, maple or cherry and finished in a wide range of colours to match any interior.',
-    image: '/img/parquet-teak.jpg',
+    image: '/img/wooden-floor-tiles-hero.jpg',
     imageAlt: 'Warm teak hardwood parquet flooring laid in a pattern',
     gallery: ['/img/parquet-teak.jpg', '/img/wood-blocks-herringbone.jpg'],
   },
   {
     slug: 'strip-flooring',
-    name: 'Strip Flooring',
+    name: 'Strip Wooden Flooring Tiles',
     short: 'Long, thin hardwood boards with a classic look.',
     description:
       'Strip flooring is made from long, thin boards, usually 2 to 3 inches wide. Prized for its classic look and versatility, it can be installed straight, diagonal or in herringbone, is easy to care for, and is available in oak, maple, walnut and cherry.',
-    image: '/img/strip-flooring-brown.jpg',
+    image: '/img/strip-wooden-flooring-tiles.jpg',
     imageAlt: 'Strip hardwood flooring in a warm brown tone',
     gallery: ['/img/strip-flooring-brown.jpg', '/img/strip-flooring-brown-white.jpg'],
   },
   {
     slug: 'wood-blocks',
-    name: 'Wood Blocks',
+    name: 'Wood Block Floor Tiles',
     short: 'End-grain and parquet blocks for unique character.',
     description:
       'Wood blocks are a beautiful, distinctive flooring option. End-grain blocks are sliced from the tree trunk into small uniform blocks; face-grain blocks are cut lengthwise from planks; and parquet blocks join small pieces into patterns. Each has its own look, benefits and installation method.',
-    image: '/img/wood-blocks.jpg',
+    image: '/img/wood-block-floor-tiles.jpg',
     imageAlt: 'Teak wood blocks arranged as flooring',
     gallery: ['/img/wood-blocks.jpg', '/img/wood-blocks-herringbone.jpg'],
   },
   {
     slug: 'wood-laminations',
-    name: 'Wood Laminations',
+    name: 'Wood Laminate Flooring',
     short: 'Bonded timber layers for strength and stability.',
     description:
       'Wood lamination bonds two or more pieces of timber with glue, pressure and heat to create a stronger, more stable product that is less likely to warp or crack. Used widely for beams, furniture and flooring, it can also create decorative veneers and inlay designs.',
-    image: '/img/laminate-1.jpg',
+    image: '/img/wood-laminate-flooring.jpg',
     imageAlt: 'Wood laminate flooring planks in a range of shades',
     gallery: ['/img/laminate-1.jpg', '/img/laminate-2.jpg', '/img/laminate-3.jpg'],
   },

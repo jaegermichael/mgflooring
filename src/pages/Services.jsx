@@ -18,8 +18,8 @@ export default function Services() {
     <>
       <PageHero
         eyebrow="Our core service"
-        title="Flooring is what we do."
-        description="Our main service is the supply and professional installation of flooring for homes, businesses and industrial spaces. Choose from timber, tile, carpet, vinyl and resin finishes."
+        title="Wooden floor tiles are our speciality."
+        description="Our main service is the supply and professional installation of wooden floor tiles across Zimbabwe, including parquet, strip wooden flooring, wood blocks and wood laminate. Tile, carpet, vinyl and resin finishes are also available."
       />
 
       <section className="pb-16 sm:pb-24">
@@ -36,7 +36,7 @@ export default function Services() {
                 </div>
               </div>
               <img
-                src="/img/parquet-teak.jpg"
+                src="/img/wooden-floor-tiles-hero.jpg"
                 alt="Professionally installed timber flooring"
                 className="h-full min-h-[22rem] w-full object-cover"
               />
