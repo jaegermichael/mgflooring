@@ -81,7 +81,7 @@ export const services = [
     short: 'Bonded timber layers for strength and stability.',
     description:
       'Wood lamination bonds two or more pieces of timber with glue, pressure and heat to create a stronger, more stable product that is less likely to warp or crack. Used widely for beams, furniture and flooring, it can also create decorative veneers and inlay designs.',
-    image: '/img/wood-laminate-flooring.jpg',
+    image: '/img/laminate-flooring-restored.png',
     imageAlt: 'Wood laminate flooring planks in a range of shades',
     gallery: ['/img/laminate-1.jpg', '/img/laminate-2.jpg', '/img/laminate-3.jpg'],
   },

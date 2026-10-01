@@ -1,20 +1,18 @@
 import { Reveal, Eyebrow } from './ui.jsx'
 
-export default function PageHero({ eyebrow, title, description }) {
+export default function PageHero({ eyebrow, title, description, image = '/img/parquet-teak.jpg' }) {
   return (
-    <section className="pt-36 pb-16 sm:pt-44 sm:pb-20 lg:pt-52 lg:pb-24">
-      <div className="container-x">
-        <Reveal>
-          <Eyebrow>{eyebrow}</Eyebrow>
+    <section className="page-hero-redesign">
+      <div className="container-wide page-hero-grid">
+        <div className="page-hero-copy">
+          <Reveal><Eyebrow>{eyebrow}</Eyebrow></Reveal>
+          <Reveal delay={80}><h1>{title}</h1></Reveal>
+          {description && <Reveal delay={160}><p>{description}</p></Reveal>}
+        </div>
+        <Reveal delay={100} className="page-hero-image">
+          <img src={image} alt="MG Flooring craftsmanship" />
+          <span>MG · Flooring Zimbabwe</span>
         </Reveal>
-        <Reveal delay={80}>
-          <h1 className="display mt-6 max-w-4xl text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">{title}</h1>
-        </Reveal>
-        {description && (
-          <Reveal delay={160}>
-            <p className="mt-7 max-w-2xl text-lg leading-relaxed text-muted sm:text-xl">{description}</p>
-          </Reveal>
-        )}
       </div>
     </section>
   )
