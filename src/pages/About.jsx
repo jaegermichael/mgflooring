@@ -30,7 +30,7 @@ export default function About() {
             <Reveal>
               <div className="relative overflow-hidden rounded-2xl">
                 <img
-                  src="/img/parquet-teak.jpg"
+                  src="/img/parquet-teak-enhanced.jpg"
                   alt="Teak parquet flooring installed by MG Flooring"
                   loading="lazy"
                   className="aspect-[4/5] w-full object-cover"

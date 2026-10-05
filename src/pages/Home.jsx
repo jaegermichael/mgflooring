@@ -4,14 +4,14 @@ import { ArrowRight } from '../components/icons.jsx'
 
 const materials = [
   { number: '01', title: 'Parquet wooden floor tiles', body: 'Pattern, warmth and a finish made for rooms with character.', image: '/img/wood-blocks-herringbone.jpg', className: 'material-card material-card-wide' },
-  { number: '02', title: 'Strip wooden flooring tiles', body: 'Natural timber lines that give a room calm, lasting rhythm.', image: '/img/strip-flooring-brown-white.jpg', className: 'material-card material-card-tall' },
+  { number: '02', title: 'Strip wooden flooring tiles', body: 'Natural timber lines that give a room calm, lasting rhythm.', image: '/img/strip-flooring-enhanced.jpg', className: 'material-card material-card-tall' },
   { number: '03', title: 'Wood block floor tiles', body: 'Durable solid blocks, precisely arranged and carefully finished.', image: '/img/wood-blocks.jpg', className: 'material-card' },
   { number: '04', title: 'Wood laminate flooring', body: 'A clean contemporary surface with practical everyday performance.', image: '/img/laminate-flooring-restored.png', className: 'material-card material-card-light' },
 ]
 
 const projectImages = [
-  { image: '/img/parquet-teak.jpg', alt: 'Warm parquet wooden floor tiles after installation', label: 'Parquet installation' },
-  { image: '/img/floor-restore-final.jpg', alt: 'Restored wooden floor after sealing', label: 'Floor restoration' },
+  { image: '/img/parquet-teak-enhanced.jpg', alt: 'Warm parquet wooden floor tiles after installation', label: 'Parquet installation' },
+  { image: '/img/floor-restore-final-enhanced.jpg', alt: 'Restored wooden floor after sealing', label: 'Floor restoration' },
   { image: '/img/vinyl-sheeting-2.jpg', alt: 'Professionally fitted vinyl flooring', label: 'Commercial flooring' },
 ]
 

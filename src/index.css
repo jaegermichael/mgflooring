@@ -181,7 +181,7 @@
   .service-marquee { overflow:hidden; border-block:1px solid var(--color-hairline); padding:1.25rem 0; }
   .marquee-track { width:max-content; display:flex; gap:3rem; animation:marquee 28s linear infinite; }
   .marquee-track span { display:flex; gap:1rem; align-items:center; font-weight:700; white-space:nowrap; }
-  .marquee-track i { width:4.5rem; height:2.6rem; border-radius:99px; background:url('/img/strip-flooring-brown-white.jpg') center/cover; }
+  .marquee-track i { width:4.5rem; height:2.6rem; border-radius:99px; background:url('/img/strip-flooring-enhanced.jpg') center/cover; }
   @keyframes marquee { to { transform:translateX(-50%); } }
   .stats-stage { position:relative; min-height:46rem; color:var(--color-cream); overflow:hidden; display:grid; place-items:center; }
   .stats-backdrop { position:absolute; inset:-8%; background:linear-gradient(rgba(22,16,12,.38),rgba(22,16,12,.68)),url('/img/wooden-floor-tiles-hero.jpg') center/cover; animation:slowZoom 16s ease-in-out infinite alternate; }

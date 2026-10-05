@@ -53,7 +53,7 @@ export const services = [
       'Hardwood parquet floors are a classic choice known for their durability and beauty. Made from small pieces of wood arranged in a geometric pattern, most commonly herringbone and basket weave, parquet can be crafted from oak, walnut, maple or cherry and finished in a wide range of colours to match any interior.',
     image: '/img/wooden-floor-tiles-hero.jpg',
     imageAlt: 'Warm teak hardwood parquet flooring laid in a pattern',
-    gallery: ['/img/parquet-teak.jpg', '/img/wood-blocks-herringbone.jpg'],
+    gallery: ['/img/parquet-teak-enhanced.jpg', '/img/wood-blocks-herringbone.jpg'],
   },
   {
     slug: 'strip-flooring',
@@ -63,7 +63,7 @@ export const services = [
       'Strip flooring is made from long, thin boards, usually 2 to 3 inches wide. Prized for its classic look and versatility, it can be installed straight, diagonal or in herringbone, is easy to care for, and is available in oak, maple, walnut and cherry.',
     image: '/img/strip-wooden-flooring-tiles.jpg',
     imageAlt: 'Strip hardwood flooring in a warm brown tone',
-    gallery: ['/img/strip-flooring-brown.jpg', '/img/strip-flooring-brown-white.jpg'],
+    gallery: ['/img/strip-flooring-brown.jpg', '/img/strip-flooring-enhanced.jpg'],
   },
   {
     slug: 'wood-blocks',
@@ -101,10 +101,10 @@ export const services = [
     short: 'Residential and commercial carpet, supplied and laid.',
     description:
       'Carpeting is available in nylon, polyester, olefin and wool, each with its own benefits. Nylon is durable, stain-resistant and easy to clean; polyester resists stains and comes in many colours; olefin resists moisture and fading; wool is soft and durable at a higher price point. We supply and install residential and commercial carpet tiles.',
-    image: '/img/carpeting.jpg',
+    image: '/img/carpeting-enhanced.jpg',
     imageAlt: 'Rolled carpeting in a showroom',
     video: '/video/carpeting.mp4',
-    gallery: ['/img/carpeting.jpg'],
+    gallery: ['/img/carpeting-enhanced.jpg'],
   },
 
   {
@@ -153,9 +153,9 @@ export const services = [
     short: 'Renew an old wooden floor to look brand new.',
     description:
       'We refurbish old wooden floors by sanding with a floor sanding machine, then apply two coats of sealer (varnish). The sealer protects and beautifies your floor, bringing worn timber back to life.',
-    image: '/img/floor-restore-final.jpg',
+    image: '/img/floor-restore-final-enhanced.jpg',
     imageAlt: 'A restored wooden floor after sanding and sealing',
-    gallery: ['/img/floor-restore-before.jpg', '/img/floor-restore-after.jpg', '/img/floor-restore-final.jpg'],
+    gallery: ['/img/floor-restore-before-enhanced.jpg', '/img/floor-restore-after-enhanced.jpg', '/img/floor-restore-final-enhanced.jpg'],
   },
 ]
 
@@ -187,7 +187,7 @@ export const projects = [
     name: 'Engineering workspace flooring',
     sector: 'Engineering',
     scope: 'Flooring supply and installation',
-    image: '/img/work-in-progress-1.jpg',
+    image: '/img/work-in-progress-enhanced.jpg',
     imageAlt: 'Flooring installation in progress',
     placeholderImage: true,
   },
@@ -203,7 +203,7 @@ export const projects = [
     name: 'Residential hardwood flooring',
     sector: 'Residential',
     scope: 'Hardwood flooring',
-    image: '/img/strip-flooring-brown-white.jpg',
+    image: '/img/strip-flooring-enhanced.jpg',
     imageAlt: 'Hardwood strip flooring in a residence',
     placeholderImage: true,
   },

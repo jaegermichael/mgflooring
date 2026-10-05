@@ -4,10 +4,10 @@ import CTABand from '../components/CTABand.jsx'
 import { Button, Reveal, Placeholder } from '../components/ui.jsx'
 
 const process = [
-  { step: '01', label: 'Old wooden floor before sanding', image: '/img/floor-restore-before.jpg', alt: 'Old wooden floor before sanding' },
-  { step: '02', label: 'Sanding in progress', image: '/img/work-in-progress-1.jpg', alt: 'Floor sanding in progress' },
-  { step: '03', label: 'After being sanded', image: '/img/floor-restore-after.jpg', alt: 'Floor after sanding' },
-  { step: '04', label: 'Final, two coats of sealer', image: '/img/floor-restore-final.jpg', alt: 'Finished floor with two coats of sealer' },
+  { step: '01', label: 'Old wooden floor before sanding', image: '/img/floor-restore-before-enhanced.jpg', alt: 'Old wooden floor before sanding' },
+  { step: '02', label: 'Sanding in progress', image: '/img/work-in-progress-enhanced.jpg', alt: 'Floor sanding in progress' },
+  { step: '03', label: 'After being sanded', image: '/img/floor-restore-after-enhanced.jpg', alt: 'Floor after sanding' },
+  { step: '04', label: 'Final, two coats of sealer', image: '/img/floor-restore-final-enhanced.jpg', alt: 'Finished floor with two coats of sealer' },
 ]
 
 const flooringServices = services.filter((service) => !['floor-restoration', 'decks'].includes(service.slug))

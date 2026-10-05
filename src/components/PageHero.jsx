@@ -1,6 +1,6 @@
 import { Reveal, Eyebrow } from './ui.jsx'
 
-export default function PageHero({ eyebrow, title, description, image = '/img/parquet-teak.jpg' }) {
+export default function PageHero({ eyebrow, title, description, image = '/img/parquet-teak-enhanced.jpg' }) {
   return (
     <section className="page-hero-redesign">
       <div className="container-wide page-hero-grid">
