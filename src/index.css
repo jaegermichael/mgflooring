@@ -332,6 +332,10 @@
   .page-hero-image img { width:100%; height:100%; object-fit:cover; object-position:center; filter:brightness(1.08) saturate(.96); }
   .page-hero-image span { position:absolute; right:1rem; bottom:1rem; padding:.65rem .8rem; background:#171717; color:white; font-size:.62rem; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
 
+  .services-page .container-x { padding-inline:clamp(1.5rem,4vw,3rem); }
+  .services-page .page-hero-grid { width:min(calc(100% - clamp(3rem,8vw,6rem)),70rem); }
+  .service-image-caption { position:absolute; left:1rem; bottom:1rem; padding:.5rem .75rem; background:rgba(23,23,23,.86); color:white; font-size:.7rem; font-weight:600; }
+
   /* Remove the card in card look and keep every site image flush with its own frame. */
   main section img { vertical-align:middle; }
   main article.group { border-radius:0 !important; border-color:#d2d2cc !important; background:transparent; }
@@ -372,6 +376,8 @@
   .work-image-1 { grid-row:auto; }
   .page-hero-redesign { padding-top:6.5rem; }
   .page-hero-grid { width:calc(100% - 1rem); }
+  .services-page .page-hero-grid { width:calc(100% - 3rem); }
+  .services-page .page-hero-copy { padding:2.5rem 1.5rem; }
   .page-hero-copy { padding:2.5rem 1.25rem; }
   .page-hero-copy h1 { font-size:3.2rem; }
   .page-hero-image { min-height:18rem; }

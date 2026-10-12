@@ -1,6 +1,6 @@
 // Central source of truth for MG Flooring content.
 // All facts below are preserved from the existing site (mgflooring.co.zw).
-// Images flagged with `placeholder: true` need a real photograph from the client.
+// Images flagged with `illustrative: true` show representative finish examples.
 
 export const company = {
   name: 'MG Flooring',
@@ -91,9 +91,9 @@ export const services = [
     short: 'Hard-wearing clay tile for floors and walls.',
     description:
       'Ceramic, porcelain and quarry tiles are all made from natural clays, kiln-fired into a hard, durable surface. Ceramic tiles are less dense and more porous; porcelain is denser with lower water absorption; quarry tiles are denser still with a rougher texture. Each suits different applications and traffic levels.',
-    image: null,
+    image: '/img/ceramic-tile-service.jpg',
     imageAlt: 'Ceramic and porcelain tile flooring',
-    placeholder: true,
+    illustrative: true,
   },
   {
     slug: 'carpeting',
@@ -123,9 +123,9 @@ export const services = [
     short: 'Seamless, hard-wearing resin floors.',
     description:
       'Seamless epoxy flooring systems for industrial, commercial and residential spaces, valued for their durability, hygiene and low maintenance.',
-    image: null,
+    image: '/img/epoxy-floor-service.jpg',
     imageAlt: 'Seamless epoxy floor finish',
-    placeholder: true,
+    illustrative: true,
   },
   {
     slug: 'decks',
@@ -133,9 +133,9 @@ export const services = [
     short: 'Outdoor teak and composite decking.',
     description:
       'Outdoor decking in teak and composite, designed and installed for patios, verandas and outdoor entertaining areas.',
-    image: null,
+    image: '/img/decking-service.jpg',
     imageAlt: 'Teak outdoor decking',
-    placeholder: true,
+    illustrative: true,
   },
   {
     slug: 'vinyl-plank',
@@ -143,9 +143,9 @@ export const services = [
     short: 'Realistic timber-look planks that stand up to wear.',
     description:
       'Vinyl plank flooring delivers the look of timber with the durability and easy care of vinyl, a practical choice for busy homes and commercial spaces.',
-    image: null,
+    image: '/img/vinyl-plank-service.jpg',
     imageAlt: 'Vinyl plank flooring in a timber finish',
-    placeholder: true,
+    illustrative: true,
   },
   {
     slug: 'floor-restoration',

@@ -15,7 +15,7 @@ const extraServices = services.filter((service) => ['floor-restoration', 'decks'
 
 export default function Services() {
   return (
-    <>
+    <div className="services-page">
       <PageHero
         eyebrow="Our core service"
         title="Wooden floor tiles are our speciality."
@@ -72,6 +72,7 @@ export default function Services() {
                         loading="lazy"
                         className="aspect-[4/3] w-full object-cover"
                       />
+                      {s.illustrative && <span className="service-image-caption">Finish example</span>}
                     </div>
                   ) : (
                     <Placeholder label={s.name} />
@@ -113,7 +114,10 @@ export default function Services() {
               <Reveal key={service.slug} delay={index * 90}>
                 <article className="grid h-full overflow-hidden rounded-2xl bg-cream lg:grid-cols-[.9fr_1.1fr]">
                   {service.image ? (
-                    <img src={service.image} alt={service.imageAlt} loading="lazy" className="h-full min-h-64 w-full object-cover" />
+                    <div className="relative min-h-64 overflow-hidden">
+                      <img src={service.image} alt={service.imageAlt} loading="lazy" className="h-full min-h-64 w-full object-cover" />
+                      {service.illustrative && <span className="service-image-caption">Finish example</span>}
+                    </div>
                   ) : (
                     <Placeholder label={service.name} className="h-full min-h-64 rounded-none border-0" />
                   )}
@@ -164,7 +168,7 @@ export default function Services() {
       </section>
 
       <CTABand />
-    </>
+    </div>
   )
 }
 
