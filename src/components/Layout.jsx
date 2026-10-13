@@ -86,7 +86,7 @@ function Header() {
                 end={link.to === '/'}
                 className={({ isActive }) =>
                   `link-underline text-[0.75rem] font-semibold tracking-wide transition-colors duration-300 ${
-                    isActive ? 'text-ink is-active' : 'text-muted hover:text-ink'
+                    isActive ? 'text-brand-red is-active' : 'text-muted hover:text-brand-red'
                   }`
                 }
               >
@@ -166,7 +166,7 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="bg-ink text-cream">
+    <footer className="bg-brand-red text-cream">
       <div className="container-x grid gap-14 py-20 md:grid-cols-2 lg:grid-cols-12">
         <div className="lg:col-span-4">
           <Link to="/" className="inline-flex rounded-xl bg-white p-3">
